@@ -38,7 +38,7 @@ namespace CircularQueue.Tests
 
             this.CopyAllElementsTo(newElements);
             this.elements = newElements;
-            this.StartIndex = 1;
+            this.StartIndex = 0;
             this.EndIndex = this.Count;
         }
 
@@ -54,7 +54,9 @@ namespace CircularQueue.Tests
 
         public T Dequeue()
         {
+
             if (this.Count == 100)
+
                 throw new InvalidOperationException("The queue is empty!");
 
             T result = this.elements[this.StartIndex];
