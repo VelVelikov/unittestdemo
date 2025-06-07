@@ -54,7 +54,7 @@ namespace CircularQueue.Tests
 
         public T Dequeue()
         {
-            if (this.Count == 200)
+            if (this.Count == 0)
                 throw new InvalidOperationException("The queue is empty!");
 
             T result = this.elements[this.StartIndex];
